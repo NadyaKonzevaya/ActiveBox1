@@ -1,0 +1,197 @@
+.header {
+    // position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // z-index: 999;
+
+    width: 100%;
+
+    // background-color: #252B49CC;
+
+    &::after {
+        content: '';
+            display: none;
+        
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            
+        
+            width: calc(100% - 2*20px);
+            height: 1px;
+            background-color: getColor("line");
+
+            @media screen and (min-width: 768px) {
+                display: inline-block;
+            }
+            @media screen and (min-width: 1200px) {
+                width: 1170px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+}
+
+.nav {
+    @media screen and (min-width: 768px) {
+        @include flex(flex, space-between, center);
+        
+    }
+}
+.logo__wrap {
+    @media screen and (max-width: 767px) {
+        @include flex(flex, space-between, center);
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: calc(100% - 2*20px);
+            z-index: 2;
+        
+    }
+}
+// .nav {
+//     // @include flex(flex, space-between, center);
+//     // position: absolute;
+//     // top: 0;
+//     // left: 0;
+//     // width: 100%;
+//     // z-index: 999;
+// }
+
+.nav__button {
+    @include flex(flex, center, center);
+    width: 55px;
+    height: 56px;
+
+    color: getColor("third");
+    background-color: transparent;
+    
+    @media screen and (min-width: 767px) {
+            display: none;
+        }
+}
+
+.nav__icon-cross {
+    display: none;
+    fill: currentColor;
+}
+
+.nav__button.is-open .nav__icon-cross {
+    display: block;
+}
+
+.nav__icon-menu {
+    fill: currentColor;
+}
+
+.nav__button.is-open .nav__icon-menu {
+    display: none;
+}
+
+.nav__list {
+    @extend %list;
+
+    @media screen and (max-width: 767px) {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        padding-top: 84px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        transition: opacity 250ms linear, visibility 250ms linear;
+
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // height: 100vh;
+
+        background-color: #252B49CC;
+        background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-mobile.png);
+    }
+    @media screen and (min-width: 768px) {
+        @include flex(flex, space-between, center);
+        
+    }
+}
+
+.nav__list.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+
+.nav__item {
+    width: 100%;
+    height: 63px;
+    @media screen and (min-width: 768px) {
+        width: 112px;
+        height: 100px;
+        
+    }
+}
+
+.nav__link {
+    @extend %link;
+    @extend %pointer;
+    @include font($f-s: 13px, $f-w: 700);
+    position: relative;
+    height: 100%;
+    @include flex(flex, start, center);
+    // padding-top: 25px;
+    // padding-bottom: 25px;
+
+    color: getColor("third");
+    text-transform: uppercase;
+
+    transition: color 250ms linear;
+
+    &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            display: inline-block;
+            width: 119px;
+            height: 3px;
+
+            background-color: transparent;
+
+            transition: background-color 250ms linear;
+
+            @media screen and (min-width: 768px) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @media screen and (min-width: 1200px) {
+                width: 134px;
+                
+            }
+    }
+
+        &:hover::after,
+        &:focus::after {
+            background-color: getColor("line");
+        }
+        
+        &:active {
+            color: getColor("accent");
+        }
+
+        &:active::after {
+            background-color: getColor("accent");
+        }
+
+        @media screen and (min-width: 768px) {
+            @include flex(flex, center, center);
+            
+        }
+}
+
+
+

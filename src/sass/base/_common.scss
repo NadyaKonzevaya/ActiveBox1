@@ -1,0 +1,12 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body{
+    font-family: Raleway, sans-serif;
+    color: getColor("main");
+    @include font();
+    // @media screen and (min-width: 320px) {
+        
+        
+    // }
+    
+}

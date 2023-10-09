@@ -1,0 +1,15 @@
+$colors: (
+    "main": #6C7279,
+    "second": #2D3033,
+    "third": #FFFFFF,
+    "forth": #000000,
+    "fifth": #808080,
+    "accent": #FF4343,
+    "second-accent": #E71414,
+    "svg": #C6CBCD,
+    "line": #BABBC5,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}

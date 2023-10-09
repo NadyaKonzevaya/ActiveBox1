@@ -1,0 +1,26 @@
+{
+  "name": "parcel-project-template",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://NadyaKonzevaya.github.io/ActiveBox",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "modern-normalize": "^2.0.0",
+    "parcel": "^2.9.3",
+    "sass": "^1.69.0",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

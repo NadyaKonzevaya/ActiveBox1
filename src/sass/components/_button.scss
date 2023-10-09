@@ -1,0 +1,25 @@
+.button {
+    @extend %pointer;
+    @extend %link;
+    @include font($f-s: 24px, $f-w: 900, $l-h: 1.17);
+    
+    @include flex(flex, center, center);
+    width: 280px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: inherit;
+    text-transform: uppercase;
+    
+    background-color: getColor("accent");
+    @media screen and (min-width: 768px) {
+        width: 314px;
+        height: 80px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 369px;
+        height: 78px;
+    }
+}

@@ -1,0 +1,42 @@
+.features {
+    @include sectionPadding(40px, 35px);
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        @include sectionPadding(78px, 80px);
+    }
+}
+
+.features__list {
+    @extend %list;
+
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px 20px;
+        
+    }
+}
+
+.features__item {
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 2*20px) / 3);
+        
+    }
+}
+
+.features__svg {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 34px;
+
+    fill: getColor("accent");
+    @media screen and (min-width: 768px) {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 45px;
+    }
+}

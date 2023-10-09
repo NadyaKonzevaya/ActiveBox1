@@ -1,0 +1,16 @@
+.logo {
+    @extend %link;
+    @extend %pointer;
+
+    width: 103px;
+    height: 14px;
+
+    &__svg {
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (min-width: 768px) {
+        width: 184px;
+        height: 26px;
+    }
+}
