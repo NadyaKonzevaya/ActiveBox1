@@ -1,13 +1,13 @@
-.testimonials {
-    @media screen and (min-width: 740px) {
+.swiper-slide {
+    @media screen and (min-width: 736px) {
         display: flex;
         
     }
 }
 
 .testimonials__img {
-    @media screen and (min-width: 740px) {
-        max-width: 49%;
+    @media screen and (min-width: 736px) {
+        max-width: 50%;
         // height: auto;
         object-fit: cover;
         // object-position: right;
@@ -21,15 +21,16 @@
     text-align: center;
 
     background-color: #5C3249;
-    @media screen and (min-width: 740px) {
+    @media screen and (min-width: 736px) {
         padding: 0 25px 0 20px;
         @include flex(flex, center, center);
         flex-direction: column;
-        
     }
     @media screen and (min-width: 1024px) {
         padding: 65px 104px 110px 88px;
-        
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 135px 170px 116px 129px;
     }
 }
 
@@ -42,41 +43,47 @@
     text-transform: capitalize;
     text-align: center;
 
-    // @media screen and (min-width: 740px) {
-    //     width: 390px;
-        
-    // }
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+    }
 }
 
 .testimonials__subquot {
     @include font($f-s: 12px, $f-w: 700);
     text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+            font-size: 13px;
+        }
 }
-
-
-
-
-
-
 
 .swiper {
     width: 100%;
     height: 100%;
     padding-bottom: 33px;
- }
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 45px;
+    }
+}
 
- .swiper-pagination {
+.swiper-pagination {
     @include flex(flex, center, center);
     gap: 21px;
+    @media screen and (min-width: 1200px) {
+        gap: 25px;
+    }
  }
 .swiper-pagination-bullet {
-    min-width: 10px;
-    min-height: 10px;
+    width: 10px;
+    height: 10px;
     margin: 0;
 
    border: 1px solid #7E5D6F;
    border-radius: 50%;
    background-color: getColor("third");
+    @media screen and (min-width: 1200px) {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 .swiper-pagination-bullet-active {
