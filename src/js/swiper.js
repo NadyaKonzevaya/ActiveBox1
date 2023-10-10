@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
+// import 'swiper/swiper-bundle.min.css';
+// import 'swiper/swiper.min.css';
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   modules: [Navigation, Pagination],
@@ -12,6 +12,7 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+    // dynamicBullets: true,
   },
 
   // Navigation arrows
