@@ -100,6 +100,7 @@
         padding-top: 84px;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 175px;
 
         transition: opacity 250ms linear, visibility 250ms linear;
 
@@ -112,6 +113,7 @@
 
         background-color: #252B49CC;
         background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-mobile.png);
+        background-size: cover;
     }
     @media screen and (min-width: 768px) {
         @include flex(flex, space-between, center);
@@ -162,29 +164,35 @@
 
             background-color: transparent;
 
-            transition: background-color 250ms linear;
+            transform: scaleX(0);
+            transform-origin: center left;
+            transition: background-color 250ms linear, transform 250ms linear;
 
             @media screen and (min-width: 768px) {
-                left: 50%;
-                transform: translateX(-50%);
+                width: 100%;
+                // left: 50%;
+                // transform: translateX(-50%);
             }
             @media screen and (min-width: 1200px) {
-                width: 134px;
+                // width: 134px;
                 
             }
     }
 
         &:hover::after,
         &:focus::after {
+            transform: scaleX(1);
             background-color: getColor("line");
         }
         
         &:active {
+            transform: scaleX(1);
             color: getColor("accent");
         }
 
         &:active::after {
             background-color: getColor("accent");
+            transform: scaleX(1);
         }
 
         @media screen and (min-width: 768px) {

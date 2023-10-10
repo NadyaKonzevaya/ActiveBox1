@@ -61,6 +61,7 @@
 
 .work__title {
     color: getColor("third");
+    
     @media screen and (min-width: 768px) {
         margin-bottom: 25px;
     }
