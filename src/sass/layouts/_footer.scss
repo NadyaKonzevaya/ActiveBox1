@@ -12,16 +12,21 @@
 
     @media screen and (min-width: 768px) {
         @include sectionPadding(47px, 101px);
-        @include flex(flex, space-between, startr);
+        @include flex(flex, space-between, start);
         gap: 20px;
-        
+    }
+    @media screen and (min-width: 1200px) {
+        @include sectionPadding(71px, 156px);
+        gap: 30px;
     }
 }
 
 .wrap {
     @media screen and (min-width: 768px) {
         width: calc((100% - 2*20px) / 3);
-        
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 2*30px) / 3);
     }
 }
 
@@ -45,6 +50,15 @@
             margin-bottom: 32px;
         }
     }
+    @media screen and (min-width: 1200px) {
+        font-size: 18px;
+        margin-bottom: 29px;
+
+        &--share {
+            margin-bottom: 49px;
+        }
+    }
+    
 }
 
 .footer__adres {
@@ -63,12 +77,20 @@
     @media screen and (min-width: 768px) {
         gap: 23px;
     }
+    @media screen and (min-width: 1200px) {
+        gap: 27px;
+    }
 }
 
 .footer__link {
     width: 33px;
     height: 33px;
     padding: 7px;
+    @media screen and (min-width: 1200px) {
+        width: 39px;
+        height: 39px;
+        padding: 8px;
+    }
 }
 
 .text--capitalized {
@@ -89,9 +111,11 @@
     color: getColor("fifth");
     background-color: #2C3154;
 
-    
     @media screen and (min-width: 768px) {
         @include sectionPadding(14px, 14px);
+    }
+    @media screen and (min-width: 1200px) {
+        @include sectionPadding(24px, 24px);
     }
 }
 
@@ -100,6 +124,9 @@
         width: 315px;
         margin-right: auto;
         margin-left: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 370px;
     }
 }
 
