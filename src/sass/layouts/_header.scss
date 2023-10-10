@@ -173,10 +173,8 @@
                 // left: 50%;
                 // transform: translateX(-50%);
             }
-            @media screen and (min-width: 1200px) {
-                // width: 134px;
-                
-            }
+
+           
     }
 
         &:hover::after,
@@ -198,6 +196,9 @@
         @media screen and (min-width: 768px) {
             @include flex(flex, center, center);
             
+        }
+         @media screen and (min-width: 768px) and (max-width: 1199px) {
+            font-size: 12px;
         }
 }
 

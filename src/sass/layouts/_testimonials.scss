@@ -68,7 +68,7 @@
 .swiper-pagination {
     @include flex(flex, center, center);
     gap: 21px;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
         gap: 25px;
     }
  }
@@ -77,6 +77,7 @@
     width: 10px;
     height: 10px;
     margin: 0;
+    bottom: 0;
 
    border: 1px solid #7E5D6F;
    border-radius: 50%;
