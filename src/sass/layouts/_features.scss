@@ -4,6 +4,9 @@
     @media screen and (min-width: 768px) {
         @include sectionPadding(78px, 80px);
     }
+    @media screen and (min-width: 1200px) {
+        @include sectionPadding(120px, 120px);
+    }
 }
 
 .features__list {
@@ -17,13 +20,19 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 50px 20px;
-        
+    }
+    @media screen and (min-width: 1200px) {
+        gap: 89px 31px;
     }
 }
 
 .features__item {
     @media screen and (min-width: 768px) {
         width: calc((100% - 2*20px) / 3);
+        
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 2*31px) / 3);
         
     }
 }
@@ -38,5 +47,10 @@
         width: 85px;
         height: 85px;
         margin-bottom: 45px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 50px;
     }
 }
