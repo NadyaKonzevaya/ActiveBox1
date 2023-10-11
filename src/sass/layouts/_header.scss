@@ -1,13 +1,9 @@
 .header {
-    // position: fixed;
     position: absolute;
     top: 0;
     left: 0;
-    // z-index: 999;
 
     width: 100%;
-
-    // background-color: #252B49CC;
 
     &::after {
         content: '';
@@ -39,6 +35,7 @@
         
     }
 }
+
 .logo__wrap {
     @media screen and (max-width: 767px) {
         @include flex(flex, space-between, center);
@@ -47,17 +44,8 @@
             left: 20px;
             width: calc(100% - 2*20px);
             z-index: 2;
-        
     }
 }
-// .nav {
-//     // @include flex(flex, space-between, center);
-//     // position: absolute;
-//     // top: 0;
-//     // left: 0;
-//     // width: 100%;
-//     // z-index: 999;
-// }
 
 .nav__button {
     @include flex(flex, center, center);
@@ -68,8 +56,8 @@
     background-color: transparent;
     
     @media screen and (min-width: 767px) {
-            display: none;
-        }
+        display: none;
+    }
 }
 
 .nav__icon-cross {
@@ -109,7 +97,6 @@
         top: 0;
         left: 0;
         width: 100%;
-        // height: 100vh;
 
         background-color: #252B49CC;
         background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-mobile.png);
@@ -130,6 +117,7 @@
 .nav__item {
     width: 100%;
     height: 63px;
+
     @media screen and (min-width: 768px) {
         width: 112px;
         height: 100px;
@@ -141,11 +129,12 @@
     @extend %link;
     @extend %pointer;
     @include font($f-s: 13px, $f-w: 700);
+
     position: relative;
+    
     height: 100%;
+
     @include flex(flex, start, center);
-    // padding-top: 25px;
-    // padding-bottom: 25px;
 
     color: getColor("third");
     text-transform: uppercase;
@@ -170,11 +159,7 @@
 
             @media screen and (min-width: 768px) {
                 width: 100%;
-                // left: 50%;
-                // transform: translateX(-50%);
             }
-
-           
     }
 
         &:hover::after,
@@ -195,9 +180,8 @@
 
         @media screen and (min-width: 768px) {
             @include flex(flex, center, center);
-            
         }
-         @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
             font-size: 12px;
         }
 }

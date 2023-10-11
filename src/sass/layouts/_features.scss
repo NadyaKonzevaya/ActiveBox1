@@ -1,9 +1,11 @@
 .features {
     @include sectionPadding(40px, 35px);
     text-align: center;
+
     @media screen and (min-width: 768px) {
         @include sectionPadding(78px, 80px);
     }
+
     @media screen and (min-width: 1200px) {
         @include sectionPadding(118px, 118px);
     }
@@ -29,11 +31,9 @@
 .features__item {
     @media screen and (min-width: 768px) {
         width: calc((100% - 2*20px) / 3);
-        
     }
     @media screen and (min-width: 1200px) {
         width: calc((100% - 2*31px) / 3);
-        
     }
 }
 
@@ -43,6 +43,7 @@
     margin-bottom: 34px;
 
     fill: getColor("accent");
+    
     @media screen and (min-width: 768px) {
         width: 85px;
         height: 85px;
