@@ -1,15 +1,24 @@
 .swiper-slide {
     @media screen and (min-width: 736px) {
         display: flex;
-        
+        height: 332px;
     }
+         @media screen and (min-width: 1200px) {
+             height: 490px;
+         }
 }
 
 .testimonials__img {
     @media screen and (min-width: 736px) {
-        max-width: 50%;
+        max-width: 49%;
         object-fit: cover;
     }
+    // @media screen and (min-width: 736px) {
+    //     height: 332px
+    // }
+    //     @media screen and (min-width: 1200px) {
+    //         height: 490px;
+    //     }
 }
 
 .testimonials__wrap {
