@@ -13,6 +13,7 @@
 }
 
 .testimonials__wrap {
+    flex-grow: 1;
     padding: 25px 25px 95px 20px;
 
     color: getColor("third");
