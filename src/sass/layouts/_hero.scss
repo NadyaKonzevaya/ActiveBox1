@@ -6,19 +6,22 @@
     
     background-color: #252B49CC;
     background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 
+    @media screen and (min-width: 576px) {
+        background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-tablet.png);
+    }
     @media screen and (min-width: 768px) {
         @include sectionPadding(257px, 126px);
-        // height: 768px;
-        background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-tablet.png);
-        background-size: cover;
-        // background-position: center;
-        background-repeat: no-repeat;
+    }
+    @media screen and (min-width: 1024px) {
+        background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-desktop.png);
     }
 
     @media screen and (min-width: 1200px) {
         @include sectionPadding(230px, 120px);
-        background-image: linear-gradient(#252B49CC, #252B49CC), url(../images/hero-desktop.png);
     }
 }
 
