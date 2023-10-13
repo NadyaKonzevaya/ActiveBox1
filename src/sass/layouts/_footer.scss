@@ -4,19 +4,25 @@
     color: getColor("third");
     text-align: center;
 
-    background-color: #353C65;
+    &--top {
+        background-color: #353C65;
+    }
+    &--bottom {
+        color: getColor("fifth");
+        background-color: #2C3154;
+    }
 }
 
 .contacts-wrap {
-    @include sectionPadding(34px, 123px);
+    @include sectionPadding(34px, 33px);
 
     @media screen and (min-width: 768px) {
-        @include sectionPadding(47px, 101px);
+        @include sectionPadding(47px, 41px);
         @include flex(flex, space-between, start);
         gap: 20px;
     }
     @media screen and (min-width: 1200px) {
-        @include sectionPadding(71px, 156px);
+        @include sectionPadding(71px, 67px);
         gap: 30px;
     }
 }
@@ -100,17 +106,9 @@
 .copyright-wrap {
     @include sectionPadding(29px, 29px); 
 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     
-    color: getColor("fifth");
-    background-color: #2C3154;
-
     @media screen and (min-width: 768px) {
         @include sectionPadding(14px, 14px);
     }

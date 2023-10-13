@@ -10,8 +10,9 @@
 
 .testimonials__img {
     @media screen and (min-width: 736px) {
-        max-width: 49%;
+        width: 49%;
         object-fit: cover;
+        flex-shrink: 0;
     }
     // @media screen and (min-width: 736px) {
     //     height: 332px

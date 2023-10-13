@@ -1,35 +1,28 @@
 <header class="header">
-  <div class="container">
+  <div class="container header__container">
+    <div class="logo__wrap">
+      <span class="logo">
+        <svg class="logo__svg">
+          <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
+      </span>
+      <button
+        class="nav__button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-container"
+        data-menu-button
+      >
+        <svg width="55" height="56" aria-label="Переключатель мобильного меню">
+          <use class="nav__icon-menu" href="./images/icons.svg#icon-menu"></use>
+          <use
+            class="nav__icon-cross"
+            href="./images/icons.svg#icon-cross"
+          ></use>
+        </svg>
+      </button>
+    </div>
     <nav class="nav" id="navigation">
-      <div class="logo__wrap">
-        <a href="#" class="logo">
-          <svg class="logo__svg">
-            <use href="./images/icons.svg#icon-logo"></use>
-          </svg>
-        </a>
-        <button
-          class="nav__button"
-          type="button"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
-          <svg
-            width="55"
-            height="56"
-            aria-label="Переключатель мобильного меню"
-          >
-            <use
-              class="nav__icon-menu"
-              href="./images/icons.svg#icon-menu"
-            ></use>
-            <use
-              class="nav__icon-cross"
-              href="./images/icons.svg#icon-cross"
-            ></use>
-          </svg>
-        </button>
-      </div>
       <ul class="nav__list" data-menu>
         <li class="nav__item">
           <a href="#features" class="nav__link">features</a>
@@ -49,9 +42,4 @@
       </ul>
     </nav>
   </div>
-  <a type="button" class="backToMenu" href="#navigation">
-    <svg class="backToMenu__svg">
-      <use href="./images/icons.svg#icon-arrow-up"></use>
-    </svg>
-  </a>
 </header>
